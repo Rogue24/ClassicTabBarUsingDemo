@@ -7,37 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00FB5C4F2ED010FC0031DF46 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 00FB5C4E2ED010FC0031DF46 /* README.md */; };
+		004D90032EDC3CBE00BE5119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D8FF92EDC3CBE00BE5119 /* AppDelegate.swift */; };
+		004D90042EDC3CBE00BE5119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90002EDC3CBE00BE5119 /* SceneDelegate.swift */; };
+		004D90052EDC3CBE00BE5119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90012EDC3CBE00BE5119 /* ViewController.swift */; };
+		004D90062EDC3CBE00BE5119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 004D8FFA2EDC3CBE00BE5119 /* Assets.xcassets */; };
+		004D90082EDC3CBE00BE5119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004D8FFD2EDC3CBE00BE5119 /* LaunchScreen.storyboard */; };
+		004D90092EDC3CBE00BE5119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004D8FFF2EDC3CBE00BE5119 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00FB5C262ED010150031DF46 /* ClassicTabBarUsingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicTabBarUsingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		00FB5C4E2ED010FC0031DF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		004D8FD12EDC3C7D00BE5119 /* ClassicTabBarUsingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassicTabBarUsingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		004D8FF92EDC3CBE00BE5119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		004D8FFA2EDC3CBE00BE5119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		004D8FFB2EDC3CBE00BE5119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		004D8FFC2EDC3CBE00BE5119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		004D8FFE2EDC3CBE00BE5119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		004D90002EDC3CBE00BE5119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		004D90012EDC3CBE00BE5119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		00FB5C382ED010160031DF46 /* Exceptions for "ClassicTabBarUsingDemo" folder in "ClassicTabBarUsingDemo" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 00FB5C252ED010150031DF46 /* ClassicTabBarUsingDemo */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		00FB5C282ED010150031DF46 /* ClassicTabBarUsingDemo */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				00FB5C382ED010160031DF46 /* Exceptions for "ClassicTabBarUsingDemo" folder in "ClassicTabBarUsingDemo" target */,
-			);
-			path = ClassicTabBarUsingDemo;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		00FB5C232ED010150031DF46 /* Frameworks */ = {
+		004D8FCE2EDC3C7D00BE5119 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,105 +37,147 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00FB5C1D2ED010150031DF46 = {
+		004D8FC82EDC3C7D00BE5119 = {
 			isa = PBXGroup;
 			children = (
-				00FB5C4E2ED010FC0031DF46 /* README.md */,
-				00FB5C282ED010150031DF46 /* ClassicTabBarUsingDemo */,
-				00FB5C272ED010150031DF46 /* Products */,
+				004D90022EDC3CBE00BE5119 /* ClassicTabBarUsingDemo */,
+				004D8FD22EDC3C7D00BE5119 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		00FB5C272ED010150031DF46 /* Products */ = {
+		004D8FD22EDC3C7D00BE5119 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				00FB5C262ED010150031DF46 /* ClassicTabBarUsingDemo.app */,
+				004D8FD12EDC3C7D00BE5119 /* ClassicTabBarUsingDemo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		004D90022EDC3CBE00BE5119 /* ClassicTabBarUsingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				004D8FF92EDC3CBE00BE5119 /* AppDelegate.swift */,
+				004D90002EDC3CBE00BE5119 /* SceneDelegate.swift */,
+				004D90012EDC3CBE00BE5119 /* ViewController.swift */,
+				004D900B2EDC3CF400BE5119 /* Supporting Files */,
+			);
+			path = ClassicTabBarUsingDemo;
+			sourceTree = "<group>";
+		};
+		004D900B2EDC3CF400BE5119 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				004D8FFA2EDC3CBE00BE5119 /* Assets.xcassets */,
+				004D8FFB2EDC3CBE00BE5119 /* Info.plist */,
+				004D8FFD2EDC3CBE00BE5119 /* LaunchScreen.storyboard */,
+				004D8FFF2EDC3CBE00BE5119 /* Main.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00FB5C252ED010150031DF46 /* ClassicTabBarUsingDemo */ = {
+		004D8FD02EDC3C7D00BE5119 /* ClassicTabBarUsingDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00FB5C392ED010160031DF46 /* Build configuration list for PBXNativeTarget "ClassicTabBarUsingDemo" */;
+			buildConfigurationList = 004D8FE42EDC3C7F00BE5119 /* Build configuration list for PBXNativeTarget "ClassicTabBarUsingDemo" */;
 			buildPhases = (
-				00FB5C222ED010150031DF46 /* Sources */,
-				00FB5C232ED010150031DF46 /* Frameworks */,
-				00FB5C242ED010150031DF46 /* Resources */,
+				004D8FCD2EDC3C7D00BE5119 /* Sources */,
+				004D8FCE2EDC3C7D00BE5119 /* Frameworks */,
+				004D8FCF2EDC3C7D00BE5119 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				00FB5C282ED010150031DF46 /* ClassicTabBarUsingDemo */,
-			);
 			name = ClassicTabBarUsingDemo;
 			packageProductDependencies = (
 			);
 			productName = ClassicTabBarUsingDemo;
-			productReference = 00FB5C262ED010150031DF46 /* ClassicTabBarUsingDemo.app */;
+			productReference = 004D8FD12EDC3C7D00BE5119 /* ClassicTabBarUsingDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		00FB5C1E2ED010150031DF46 /* Project object */ = {
+		004D8FC92EDC3C7D00BE5119 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
-					00FB5C252ED010150031DF46 = {
+					004D8FD02EDC3C7D00BE5119 = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
 			};
-			buildConfigurationList = 00FB5C212ED010150031DF46 /* Build configuration list for PBXProject "ClassicTabBarUsingDemo" */;
+			buildConfigurationList = 004D8FCC2EDC3C7D00BE5119 /* Build configuration list for PBXProject "ClassicTabBarUsingDemo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 00FB5C1D2ED010150031DF46;
+			mainGroup = 004D8FC82EDC3C7D00BE5119;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 00FB5C272ED010150031DF46 /* Products */;
+			productRefGroup = 004D8FD22EDC3C7D00BE5119 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				00FB5C252ED010150031DF46 /* ClassicTabBarUsingDemo */,
+				004D8FD02EDC3C7D00BE5119 /* ClassicTabBarUsingDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00FB5C242ED010150031DF46 /* Resources */ = {
+		004D8FCF2EDC3C7D00BE5119 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00FB5C4F2ED010FC0031DF46 /* README.md in Resources */,
+				004D90062EDC3CBE00BE5119 /* Assets.xcassets in Resources */,
+				004D90082EDC3CBE00BE5119 /* LaunchScreen.storyboard in Resources */,
+				004D90092EDC3CBE00BE5119 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00FB5C222ED010150031DF46 /* Sources */ = {
+		004D8FCD2EDC3C7D00BE5119 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				004D90032EDC3CBE00BE5119 /* AppDelegate.swift in Sources */,
+				004D90042EDC3CBE00BE5119 /* SceneDelegate.swift in Sources */,
+				004D90052EDC3CBE00BE5119 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		004D8FFD2EDC3CBE00BE5119 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				004D8FFC2EDC3CBE00BE5119 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		004D8FFF2EDC3CBE00BE5119 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				004D8FFE2EDC3CBE00BE5119 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		00FB5C3A2ED010160031DF46 /* Debug */ = {
+		004D8FE52EDC3C7F00BE5119 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -154,7 +186,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ClassicTabBarUsingDemo/Info.plist;
+				INFOPLIST_FILE = "ClassicTabBarUsingDemo/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -177,7 +209,7 @@
 			};
 			name = Debug;
 		};
-		00FB5C3B2ED010160031DF46 /* Release */ = {
+		004D8FE62EDC3C7F00BE5119 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -186,7 +218,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ClassicTabBarUsingDemo/Info.plist;
+				INFOPLIST_FILE = "ClassicTabBarUsingDemo/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -209,7 +241,7 @@
 			};
 			name = Release;
 		};
-		00FB5C3C2ED010160031DF46 /* Debug */ = {
+		004D8FE72EDC3C7F00BE5119 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,7 +305,7 @@
 			};
 			name = Debug;
 		};
-		00FB5C3D2ED010160031DF46 /* Release */ = {
+		004D8FE82EDC3C7F00BE5119 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -333,25 +365,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00FB5C212ED010150031DF46 /* Build configuration list for PBXProject "ClassicTabBarUsingDemo" */ = {
+		004D8FCC2EDC3C7D00BE5119 /* Build configuration list for PBXProject "ClassicTabBarUsingDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00FB5C3C2ED010160031DF46 /* Debug */,
-				00FB5C3D2ED010160031DF46 /* Release */,
+				004D8FE72EDC3C7F00BE5119 /* Debug */,
+				004D8FE82EDC3C7F00BE5119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00FB5C392ED010160031DF46 /* Build configuration list for PBXNativeTarget "ClassicTabBarUsingDemo" */ = {
+		004D8FE42EDC3C7F00BE5119 /* Build configuration list for PBXNativeTarget "ClassicTabBarUsingDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00FB5C3A2ED010160031DF46 /* Debug */,
-				00FB5C3B2ED010160031DF46 /* Release */,
+				004D8FE52EDC3C7F00BE5119 /* Debug */,
+				004D8FE62EDC3C7F00BE5119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 00FB5C1E2ED010150031DF46 /* Project object */;
+	rootObject = 004D8FC92EDC3C7D00BE5119 /* Project object */;
 }
