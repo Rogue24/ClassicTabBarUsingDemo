@@ -25,7 +25,8 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         var config = UIBackgroundConfiguration.listCell()
-        config.backgroundColor = UIColor(white: 1, alpha: 0.6)
+        config.backgroundColor = .clear
+        config.visualEffect = UIBlurEffect(style: .systemThinMaterialLight)
         UITableViewCell.appearance().backgroundConfiguration = config
         
         setupViewControllers()
@@ -119,6 +120,10 @@ extension MainTabBarController: WLTabBarDelegate {
     func tabBar(_ tabBar: WLTabBar!, didSelectItemAt index: Int) {
         moveTabBar(from: selectedIndex, to: index)
         selectedIndex = index
+        // 想移除系统自带的切换动画就👇🏻
+//        UIView.performWithoutAnimation {
+//            self.selectedIndex = index
+//        }
     }
 }
 

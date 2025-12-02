@@ -60,7 +60,7 @@
         self.backgroundColor = UIColor.clearColor;
         
         UIGlassEffect *effect = [UIGlassEffect effectWithStyle:UIGlassEffectStyleClear];
-        effect.tintColor = [UIColor colorWithWhite:1 alpha:0.6];
+        effect.tintColor = [UIColor colorWithWhite:0.2 alpha:0.8];
         UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
         blurView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width);
         blurView.layer.cornerRadius = JPScaleValue(16);
@@ -224,7 +224,7 @@
     
     [self preparePlusSubviews];
     
-    UIColor *bgColor = self.plusing ? JPRGBAColor(0, 0, 0, 0.35) : JPRGBAColor(0, 0, 0, 0);
+    UIColor *bgColor = self.plusing ? JPRGBAColor(0, 0, 0, 0.2) : JPRGBAColor(0, 0, 0, 0);
     
     CGRect blurFrame = self.blurView.frame;
     blurFrame.origin.y = self.plusing ? _blurPlusY : 0;
