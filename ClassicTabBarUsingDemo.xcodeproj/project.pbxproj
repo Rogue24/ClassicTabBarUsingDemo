@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		004D90032EDC3CBE00BE5119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D8FF92EDC3CBE00BE5119 /* AppDelegate.swift */; };
 		004D90042EDC3CBE00BE5119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90002EDC3CBE00BE5119 /* SceneDelegate.swift */; };
-		004D90052EDC3CBE00BE5119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90012EDC3CBE00BE5119 /* ViewController.swift */; };
 		004D90062EDC3CBE00BE5119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 004D8FFA2EDC3CBE00BE5119 /* Assets.xcassets */; };
 		004D90082EDC3CBE00BE5119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004D8FFD2EDC3CBE00BE5119 /* LaunchScreen.storyboard */; };
-		004D90092EDC3CBE00BE5119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004D8FFF2EDC3CBE00BE5119 /* Main.storyboard */; };
 		004D909C2EDD39D200BE5119 /* POPLayerExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 004D908C2EDD39D200BE5119 /* POPLayerExtras.mm */; };
 		004D909D2EDD39D200BE5119 /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 004D90652EDD39D200BE5119 /* TransformationMatrix.cpp */; };
 		004D909E2EDD39D200BE5119 /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 004D90972EDD39D200BE5119 /* POPVector.mm */; };
@@ -36,6 +34,21 @@
 		004D90B72EDE900400BE5119 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90B62EDE900400BE5119 /* Env.swift */; };
 		004D90B92EDE936600BE5119 /* JPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90B82EDE936600BE5119 /* JPrint.swift */; };
 		004D90BB2EDE987A00BE5119 /* Asyncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90BA2EDE987A00BE5119 /* Asyncs.swift */; };
+		004D90BC2EDEB98F00BE5119 /* WLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D90122EDD358800BE5119 /* WLTabBar.m */; };
+		004D90BF2EDEBBF700BE5119 /* JPConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D90BE2EDEBBF700BE5119 /* JPConstant.m */; };
+		004D90C12EDEC4D600BE5119 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90C02EDEC4D600BE5119 /* BaseNavigationController.swift */; };
+		004D90C32EDEC4E800BE5119 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90C22EDEC4E800BE5119 /* BaseViewController.swift */; };
+		004D90C72EDEC90700BE5119 /* UIView+JPPOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D90C62EDEC90700BE5119 /* UIView+JPPOP.m */; };
+		004D90C92EDEDADE00BE5119 /* TabBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90C82EDEDADE00BE5119 /* TabBarContainer.swift */; };
+		004D90CB2EDEE9EC00BE5119 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90CA2EDEE9EC00BE5119 /* UIColor+Extension.swift */; };
+		004D90D62EDEF27300BE5119 /* IMG_3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D12EDEF27300BE5119 /* IMG_3.jpeg */; };
+		004D90D72EDEF27300BE5119 /* IMG_4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D22EDEF27300BE5119 /* IMG_4.jpeg */; };
+		004D90D82EDEF27300BE5119 /* IMG_2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D02EDEF27300BE5119 /* IMG_2.jpeg */; };
+		004D90D92EDEF27300BE5119 /* IMG_0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90CE2EDEF27300BE5119 /* IMG_0.jpeg */; };
+		004D90DA2EDEF27300BE5119 /* IMG_5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D32EDEF27300BE5119 /* IMG_5.jpeg */; };
+		004D90DB2EDEF27300BE5119 /* IMG_6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D42EDEF27300BE5119 /* IMG_6.jpeg */; };
+		004D90DC2EDEF27300BE5119 /* IMG_8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D52EDEF27300BE5119 /* IMG_8.jpeg */; };
+		004D90DD2EDEF27300BE5119 /* IMG_1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90CF2EDEF27300BE5119 /* IMG_1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +57,7 @@
 		004D8FFA2EDC3CBE00BE5119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		004D8FFB2EDC3CBE00BE5119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		004D8FFC2EDC3CBE00BE5119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		004D8FFE2EDC3CBE00BE5119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		004D90002EDC3CBE00BE5119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		004D90012EDC3CBE00BE5119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		004D900D2EDD354F00BE5119 /* ClassicTabBarUsingDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClassicTabBarUsingDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		004D90112EDD358800BE5119 /* WLTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLTabBar.h; sourceTree = "<group>"; };
 		004D90122EDD358800BE5119 /* WLTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLTabBar.m; sourceTree = "<group>"; };
@@ -108,6 +119,22 @@
 		004D90B62EDE900400BE5119 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		004D90B82EDE936600BE5119 /* JPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPrint.swift; sourceTree = "<group>"; };
 		004D90BA2EDE987A00BE5119 /* Asyncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncs.swift; sourceTree = "<group>"; };
+		004D90BD2EDEBBF700BE5119 /* JPConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPConstant.h; sourceTree = "<group>"; };
+		004D90BE2EDEBBF700BE5119 /* JPConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPConstant.m; sourceTree = "<group>"; };
+		004D90C02EDEC4D600BE5119 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		004D90C22EDEC4E800BE5119 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		004D90C52EDEC90700BE5119 /* UIView+JPPOP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JPPOP.h"; sourceTree = "<group>"; };
+		004D90C62EDEC90700BE5119 /* UIView+JPPOP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JPPOP.m"; sourceTree = "<group>"; };
+		004D90C82EDEDADE00BE5119 /* TabBarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainer.swift; sourceTree = "<group>"; };
+		004D90CA2EDEE9EC00BE5119 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		004D90CE2EDEF27300BE5119 /* IMG_0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0.jpeg; sourceTree = "<group>"; };
+		004D90CF2EDEF27300BE5119 /* IMG_1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1.jpeg; sourceTree = "<group>"; };
+		004D90D02EDEF27300BE5119 /* IMG_2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2.jpeg; sourceTree = "<group>"; };
+		004D90D12EDEF27300BE5119 /* IMG_3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3.jpeg; sourceTree = "<group>"; };
+		004D90D22EDEF27300BE5119 /* IMG_4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4.jpeg; sourceTree = "<group>"; };
+		004D90D32EDEF27300BE5119 /* IMG_5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5.jpeg; sourceTree = "<group>"; };
+		004D90D42EDEF27300BE5119 /* IMG_6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6.jpeg; sourceTree = "<group>"; };
+		004D90D52EDEF27300BE5119 /* IMG_8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_8.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +170,7 @@
 				004D8FF92EDC3CBE00BE5119 /* AppDelegate.swift */,
 				004D90002EDC3CBE00BE5119 /* SceneDelegate.swift */,
 				004D90B12EDE8DC000BE5119 /* MainTabBarController.swift */,
-				004D90012EDC3CBE00BE5119 /* ViewController.swift */,
+				004D90CC2EDEF1C200BE5119 /* Base */,
 				004D900C2EDD353D00BE5119 /* TabBar */,
 				004D90622EDD37D000BE5119 /* Helper */,
 				004D900B2EDC3CF400BE5119 /* Supporting Files */,
@@ -154,11 +181,11 @@
 		004D900B2EDC3CF400BE5119 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				004D90CD2EDEF1DD00BE5119 /* Resources */,
 				004D900D2EDD354F00BE5119 /* ClassicTabBarUsingDemo-Bridging-Header.h */,
 				004D8FFA2EDC3CBE00BE5119 /* Assets.xcassets */,
 				004D8FFB2EDC3CBE00BE5119 /* Info.plist */,
 				004D8FFD2EDC3CBE00BE5119 /* LaunchScreen.storyboard */,
-				004D8FFF2EDC3CBE00BE5119 /* Main.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -166,6 +193,7 @@
 		004D900C2EDD353D00BE5119 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				004D90C82EDEDADE00BE5119 /* TabBarContainer.swift */,
 				004D90112EDD358800BE5119 /* WLTabBar.h */,
 				004D90122EDD358800BE5119 /* WLTabBar.m */,
 			);
@@ -175,6 +203,7 @@
 		004D90622EDD37D000BE5119 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				004D90C42EDEC8F800BE5119 /* Category */,
 				004D90B52EDE8FF900BE5119 /* Const */,
 				004D90B42EDE8FE600BE5119 /* Tool */,
 				004D90B32EDE8FDB00BE5119 /* View */,
@@ -272,8 +301,44 @@
 			isa = PBXGroup;
 			children = (
 				004D90B62EDE900400BE5119 /* Env.swift */,
+				004D90BD2EDEBBF700BE5119 /* JPConstant.h */,
+				004D90BE2EDEBBF700BE5119 /* JPConstant.m */,
 			);
 			path = Const;
+			sourceTree = "<group>";
+		};
+		004D90C42EDEC8F800BE5119 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				004D90C52EDEC90700BE5119 /* UIView+JPPOP.h */,
+				004D90C62EDEC90700BE5119 /* UIView+JPPOP.m */,
+				004D90CA2EDEE9EC00BE5119 /* UIColor+Extension.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		004D90CC2EDEF1C200BE5119 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				004D90C02EDEC4D600BE5119 /* BaseNavigationController.swift */,
+				004D90C22EDEC4E800BE5119 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		004D90CD2EDEF1DD00BE5119 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				004D90CE2EDEF27300BE5119 /* IMG_0.jpeg */,
+				004D90CF2EDEF27300BE5119 /* IMG_1.jpeg */,
+				004D90D02EDEF27300BE5119 /* IMG_2.jpeg */,
+				004D90D12EDEF27300BE5119 /* IMG_3.jpeg */,
+				004D90D22EDEF27300BE5119 /* IMG_4.jpeg */,
+				004D90D32EDEF27300BE5119 /* IMG_5.jpeg */,
+				004D90D42EDEF27300BE5119 /* IMG_6.jpeg */,
+				004D90D52EDEF27300BE5119 /* IMG_8.jpeg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,9 +403,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				004D90D62EDEF27300BE5119 /* IMG_3.jpeg in Resources */,
+				004D90D72EDEF27300BE5119 /* IMG_4.jpeg in Resources */,
+				004D90D82EDEF27300BE5119 /* IMG_2.jpeg in Resources */,
+				004D90D92EDEF27300BE5119 /* IMG_0.jpeg in Resources */,
+				004D90DA2EDEF27300BE5119 /* IMG_5.jpeg in Resources */,
+				004D90DB2EDEF27300BE5119 /* IMG_6.jpeg in Resources */,
+				004D90DC2EDEF27300BE5119 /* IMG_8.jpeg in Resources */,
+				004D90DD2EDEF27300BE5119 /* IMG_1.jpeg in Resources */,
 				004D90062EDC3CBE00BE5119 /* Assets.xcassets in Resources */,
 				004D90082EDC3CBE00BE5119 /* LaunchScreen.storyboard in Resources */,
-				004D90092EDC3CBE00BE5119 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,14 +425,15 @@
 			files = (
 				004D90032EDC3CBE00BE5119 /* AppDelegate.swift in Sources */,
 				004D90042EDC3CBE00BE5119 /* SceneDelegate.swift in Sources */,
-				004D90052EDC3CBE00BE5119 /* ViewController.swift in Sources */,
 				004D909C2EDD39D200BE5119 /* POPLayerExtras.mm in Sources */,
 				004D909D2EDD39D200BE5119 /* TransformationMatrix.cpp in Sources */,
+				004D90C32EDEC4E800BE5119 /* BaseViewController.swift in Sources */,
 				004D909E2EDD39D200BE5119 /* POPVector.mm in Sources */,
 				004D90B22EDE8DC000BE5119 /* MainTabBarController.swift in Sources */,
 				004D909F2EDD39D200BE5119 /* POPGeometry.mm in Sources */,
 				004D90A02EDD39D200BE5119 /* POPAnimationEvent.mm in Sources */,
 				004D90A12EDD39D200BE5119 /* POPAnimationTracer.mm in Sources */,
+				004D90BC2EDEB98F00BE5119 /* WLTabBar.m in Sources */,
 				004D90A22EDD39D200BE5119 /* POPMath.mm in Sources */,
 				004D90A32EDD39D200BE5119 /* POPSpringAnimation.mm in Sources */,
 				004D90BB2EDE987A00BE5119 /* Asyncs.swift in Sources */,
@@ -368,14 +441,19 @@
 				004D90A42EDD39D200BE5119 /* POPAnimation.mm in Sources */,
 				004D90A52EDD39D200BE5119 /* POPAnimationExtras.mm in Sources */,
 				004D90A62EDD39D200BE5119 /* POPAnimationRuntime.mm in Sources */,
+				004D90C12EDEC4D600BE5119 /* BaseNavigationController.swift in Sources */,
+				004D90C92EDEDADE00BE5119 /* TabBarContainer.swift in Sources */,
 				004D90B02EDD3B2E00BE5119 /* JPBounceView.m in Sources */,
 				004D90A72EDD39D200BE5119 /* POPPropertyAnimation.mm in Sources */,
 				004D90A82EDD39D200BE5119 /* POPBasicAnimation.mm in Sources */,
+				004D90CB2EDEE9EC00BE5119 /* UIColor+Extension.swift in Sources */,
 				004D90A92EDD39D200BE5119 /* POPAnimator.mm in Sources */,
 				004D90AA2EDD39D200BE5119 /* POPCustomAnimation.mm in Sources */,
+				004D90BF2EDEBBF700BE5119 /* JPConstant.m in Sources */,
 				004D90AB2EDD39D200BE5119 /* POPDecayAnimation.mm in Sources */,
 				004D90B72EDE900400BE5119 /* Env.swift in Sources */,
 				004D90AC2EDD39D200BE5119 /* POPAnimatableProperty.mm in Sources */,
+				004D90C72EDEC90700BE5119 /* UIView+JPPOP.m in Sources */,
 				004D90AD2EDD39D200BE5119 /* POPCGUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,14 +467,6 @@
 				004D8FFC2EDC3CBE00BE5119 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		004D8FFF2EDC3CBE00BE5119 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				004D8FFE2EDC3CBE00BE5119 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -415,7 +485,7 @@
 				INFOPLIST_FILE = "ClassicTabBarUsingDemo/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,7 +524,7 @@
 				INFOPLIST_FILE = "ClassicTabBarUsingDemo/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

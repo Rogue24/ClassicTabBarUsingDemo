@@ -8,19 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "JPBounceView.h"
+@class WLTabBar;
 @class WLTabBarItem;
 
-@interface WLTabBar : UITabBar
-+ (CGRect)tabBarFrame;
-@property (nonatomic, assign) CGRect tabBarFrame;
+@protocol WLTabBarDelegate <NSObject>
+- (void)tabBar:(WLTabBar *)tabBar didSelectItemAt:(NSInteger)index;
+@end
+
+@interface WLTabBar : UIView
 @property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, weak) id<WLTabBarDelegate> delegate;
 
 @property (nonatomic, strong) NSMutableArray<WLTabBarItem *> *tabBarItems;
-- (UIViewController *)addChildVC:(UIViewController *)childVC
-                           title:(NSString *)title
-                           index:(NSInteger)index
-                      normalIcon:(NSString *)normalIcon
-                      selectIcon:(NSString *)selectIcon;
+- (void)addItemWithTitle:(NSString *)title
+              normalIcon:(NSString *)normalIcon
+              selectIcon:(NSString *)selectIcon
+                   index:(NSInteger)index;
 
 @property (nonatomic, weak) UIView *plusSuperView;
 @property (nonatomic, weak) JPBounceView *plusView;
@@ -37,7 +40,6 @@
 @interface WLTabBarItem : JPBounceView
 
 - (instancetype)initWithFrame:(CGRect)frame
-                      childVC:(UIViewController *)childVC
                         title:(NSString *)title
                         index:(NSInteger)index
                    normalIcon:(NSString *)normalIcon

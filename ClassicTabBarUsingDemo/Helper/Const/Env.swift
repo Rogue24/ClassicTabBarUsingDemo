@@ -7,7 +7,8 @@
 
 import UIKit
 
-enum Env {
+@objcMembers
+final class Env: NSObject {
     /// window
     static var window: UIWindow? {
         for scene in UIApplication.shared.connectedScenes {
@@ -82,4 +83,24 @@ enum Env {
     static var tabBarBaseH: CGFloat { 49.0 }
     /// tabBar+底部安全间距
     static var tabBarFullH: CGFloat { tabBarBaseH + safeAreaInsets.bottom }
+    
+    /// 是否正在使用液态玻璃UI
+    static var isUsingLiquidGlassUI: Bool {
+        if let isUsing = _isUsingLiquidGlassUI {
+            return isUsing
+        }
+        
+        var isUsing = false
+        if #available(iOS 26.0, *) {
+            if let isEnabled = Bundle.main.object(forInfoDictionaryKey: "UIDesignRequiresCompatibility") as? Bool, isEnabled { // 已开启「禁用新UI」
+                isUsing = false
+            } else {
+                isUsing = true
+            }
+        }
+        
+        _isUsingLiquidGlassUI = isUsing
+        return isUsing
+    }
+    private static var _isUsingLiquidGlassUI: Bool? = nil
 }
