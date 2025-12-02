@@ -59,8 +59,11 @@
     if (self = [super initWithFrame:CGRectMake(0, 0, Env.screenWidth, Env.tabBarFullH)]) {
         self.backgroundColor = UIColor.clearColor;
         
-        UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:[UIGlassEffect effectWithStyle:UIGlassEffectStyleRegular]];
+        UIGlassEffect *effect = [UIGlassEffect effectWithStyle:UIGlassEffectStyleClear];
+        effect.tintColor = [UIColor colorWithWhite:1 alpha:0.6];
+        UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
         blurView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width);
+        blurView.layer.cornerRadius = JPScaleValue(16);
         blurView.layer.masksToBounds = YES;
         [self addSubview:blurView];
         self.blurView = blurView;
@@ -95,27 +98,11 @@
         self.lpGR = lpGR;
         
         _blurPlusY = -(JPScaleValue(212) + Env.safeAreaInsets.bottom);
-//        JPObserveNotification(self, @selector(updateColor), WLTraitCollectionDidChangeNotification, nil);
-//        JPObserveNotification(self, @selector(pushVcDidAppear), JPPushViewControllerDidAppearNotification, nil);
     }
     return self;
 }
 
-- (void)dealloc {
-//    JPRemoveNotification(self);
-}
-
-#pragma mark - 通知响应
-
-- (void)updateColor {
-    if (!self.plusing) self.plusView.image = [UIImage imageNamed:@"com_home_live_icon"];
-}
-
-- (void)pushVcDidAppear {
-    [self closePlus:NO];
-}
-
-#pragma mark - 重写父类方法（布局子视图 & 点击区域的响应）
+#pragma mark - 重写父类方法（点击区域的响应）
 
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
     if (self.plusing) {
@@ -242,7 +229,7 @@
     CGRect blurFrame = self.blurView.frame;
     blurFrame.origin.y = self.plusing ? _blurPlusY : 0;
     
-    CGFloat blurRadius = self.plusing ? JPScaleValue(16) : 0;
+    CGFloat blurRadius = self.plusing ? JPScaleValue(22) : JPScaleValue(16);
     
     CGFloat iconAlpha = self.plusing ? 1 : 0;
     CGFloat iconScale = self.plusing ? 1 : (self.plusSuperView.frame.size.width / self.mobileView.frame.size.width);
@@ -487,27 +474,10 @@
 #pragma mark - 前往直播
 
 - (void)choose:(NSInteger)pushType {
-    [self startToLive];
+    NSLog(@"前往直播 --- %zd", pushType);
 }
-
-- (void)startToLive {
-//    JPLiveModuleNavigationController *navCtr;
-//    WLLiveModel *liveModel = WLGlobalDataInstance.liveModel;
-//    if (liveModel) {
-//        self.pushType = liveModel.pushType;
-//        navCtr = [JPLiveModuleNavigationController livePushNavigationControllerWithTransitionDelegate:self liveModel:liveModel];
-//    } else {
-//        navCtr = [JPLiveModuleNavigationController settingNavigationControllerWithTransitionDelegate:self pushType:self.pushType];
-//    }
-//    [WLTabBarCtr presentViewController:navCtr animated:YES completion:nil];
-}
-
-
 
 @end
-
-
-
 
 
 @interface WLTabBarItem ()
@@ -528,7 +498,7 @@
         self.scaleDuration = 0.2;
         self.recoverBounciness = 15;
         
-        CGRect iconFrame = CGRectMake(JPScaleValue(25), 6, 20, 20);
+        CGRect iconFrame = CGRectMake(JPScaleValue(25), 8, 20, 20);
         
         UIImageView *normalIconView = [[UIImageView alloc] initWithFrame:iconFrame];
         normalIconView.image = [UIImage imageNamed:normalIcon];
@@ -545,7 +515,7 @@
             aLabel.textAlignment = NSTextAlignmentCenter;
             aLabel.font = [UIFont systemFontOfSize:10];
             aLabel.text = title;
-            aLabel.frame = CGRectMake(0, 30, self.bounds.size.width, 14);
+            aLabel.frame = CGRectMake(0, 8 + 20 + 4, self.bounds.size.width, 14);
             aLabel;
         });
         [self addSubview:titleLabel];

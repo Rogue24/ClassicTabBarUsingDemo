@@ -7,6 +7,16 @@
 
 import UIKit
 
+var AllBgImgs: [UIImage] = [
+    UIImage(contentsOfFile: Bundle.main.path(forResource: "IMG_0", ofType: "jpeg")!)!,
+    UIImage(contentsOfFile: Bundle.main.path(forResource: "IMG_1", ofType: "jpeg")!)!,
+    UIImage(contentsOfFile: Bundle.main.path(forResource: "IMG_2", ofType: "jpeg")!)!,
+    UIImage(contentsOfFile: Bundle.main.path(forResource: "IMG_3", ofType: "jpeg")!)!,
+    UIImage(contentsOfFile: Bundle.main.path(forResource: "IMG_4", ofType: "jpeg")!)!,
+    UIImage(contentsOfFile: Bundle.main.path(forResource: "IMG_5", ofType: "jpeg")!)!,
+    UIImage(contentsOfFile: Bundle.main.path(forResource: "IMG_6", ofType: "jpeg")!)!,
+]
+
 @objcMembers
 final class Env: NSObject {
     /// window

@@ -43,12 +43,13 @@
 		004D90CB2EDEE9EC00BE5119 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90CA2EDEE9EC00BE5119 /* UIColor+Extension.swift */; };
 		004D90D62EDEF27300BE5119 /* IMG_3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D12EDEF27300BE5119 /* IMG_3.jpeg */; };
 		004D90D72EDEF27300BE5119 /* IMG_4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D22EDEF27300BE5119 /* IMG_4.jpeg */; };
-		004D90D82EDEF27300BE5119 /* IMG_2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D02EDEF27300BE5119 /* IMG_2.jpeg */; };
 		004D90D92EDEF27300BE5119 /* IMG_0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90CE2EDEF27300BE5119 /* IMG_0.jpeg */; };
 		004D90DA2EDEF27300BE5119 /* IMG_5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D32EDEF27300BE5119 /* IMG_5.jpeg */; };
 		004D90DB2EDEF27300BE5119 /* IMG_6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D42EDEF27300BE5119 /* IMG_6.jpeg */; };
-		004D90DC2EDEF27300BE5119 /* IMG_8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D52EDEF27300BE5119 /* IMG_8.jpeg */; };
+		004D90DC2EDEF27300BE5119 /* IMG_2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90D52EDEF27300BE5119 /* IMG_2.jpeg */; };
 		004D90DD2EDEF27300BE5119 /* IMG_1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90CF2EDEF27300BE5119 /* IMG_1.jpeg */; };
+		004D90DF2EDEFA8000BE5119 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90DE2EDEFA8000BE5119 /* HomeViewController.swift */; };
+		004D90E12EDF013B00BE5119 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90E02EDF013B00BE5119 /* TempViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,12 +130,14 @@
 		004D90CA2EDEE9EC00BE5119 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		004D90CE2EDEF27300BE5119 /* IMG_0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0.jpeg; sourceTree = "<group>"; };
 		004D90CF2EDEF27300BE5119 /* IMG_1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1.jpeg; sourceTree = "<group>"; };
-		004D90D02EDEF27300BE5119 /* IMG_2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2.jpeg; sourceTree = "<group>"; };
 		004D90D12EDEF27300BE5119 /* IMG_3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3.jpeg; sourceTree = "<group>"; };
 		004D90D22EDEF27300BE5119 /* IMG_4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_4.jpeg; sourceTree = "<group>"; };
 		004D90D32EDEF27300BE5119 /* IMG_5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5.jpeg; sourceTree = "<group>"; };
 		004D90D42EDEF27300BE5119 /* IMG_6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6.jpeg; sourceTree = "<group>"; };
-		004D90D52EDEF27300BE5119 /* IMG_8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_8.jpeg; sourceTree = "<group>"; };
+		004D90D52EDEF27300BE5119 /* IMG_2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2.jpeg; sourceTree = "<group>"; };
+		004D90DE2EDEFA8000BE5119 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		004D90E02EDF013B00BE5119 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		004D90E22EDF2C0100BE5119 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,7 @@
 		004D8FC82EDC3C7D00BE5119 = {
 			isa = PBXGroup;
 			children = (
+				004D90E22EDF2C0100BE5119 /* README.md */,
 				004D90022EDC3CBE00BE5119 /* ClassicTabBarUsingDemo */,
 				004D8FD22EDC3C7D00BE5119 /* Products */,
 			);
@@ -170,6 +174,8 @@
 				004D8FF92EDC3CBE00BE5119 /* AppDelegate.swift */,
 				004D90002EDC3CBE00BE5119 /* SceneDelegate.swift */,
 				004D90B12EDE8DC000BE5119 /* MainTabBarController.swift */,
+				004D90DE2EDEFA8000BE5119 /* HomeViewController.swift */,
+				004D90E02EDF013B00BE5119 /* TempViewController.swift */,
 				004D90CC2EDEF1C200BE5119 /* Base */,
 				004D900C2EDD353D00BE5119 /* TabBar */,
 				004D90622EDD37D000BE5119 /* Helper */,
@@ -331,12 +337,11 @@
 			children = (
 				004D90CE2EDEF27300BE5119 /* IMG_0.jpeg */,
 				004D90CF2EDEF27300BE5119 /* IMG_1.jpeg */,
-				004D90D02EDEF27300BE5119 /* IMG_2.jpeg */,
+				004D90D52EDEF27300BE5119 /* IMG_2.jpeg */,
 				004D90D12EDEF27300BE5119 /* IMG_3.jpeg */,
 				004D90D22EDEF27300BE5119 /* IMG_4.jpeg */,
 				004D90D32EDEF27300BE5119 /* IMG_5.jpeg */,
 				004D90D42EDEF27300BE5119 /* IMG_6.jpeg */,
-				004D90D52EDEF27300BE5119 /* IMG_8.jpeg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -405,11 +410,10 @@
 			files = (
 				004D90D62EDEF27300BE5119 /* IMG_3.jpeg in Resources */,
 				004D90D72EDEF27300BE5119 /* IMG_4.jpeg in Resources */,
-				004D90D82EDEF27300BE5119 /* IMG_2.jpeg in Resources */,
 				004D90D92EDEF27300BE5119 /* IMG_0.jpeg in Resources */,
 				004D90DA2EDEF27300BE5119 /* IMG_5.jpeg in Resources */,
 				004D90DB2EDEF27300BE5119 /* IMG_6.jpeg in Resources */,
-				004D90DC2EDEF27300BE5119 /* IMG_8.jpeg in Resources */,
+				004D90DC2EDEF27300BE5119 /* IMG_2.jpeg in Resources */,
 				004D90DD2EDEF27300BE5119 /* IMG_1.jpeg in Resources */,
 				004D90062EDC3CBE00BE5119 /* Assets.xcassets in Resources */,
 				004D90082EDC3CBE00BE5119 /* LaunchScreen.storyboard in Resources */,
@@ -427,6 +431,7 @@
 				004D90042EDC3CBE00BE5119 /* SceneDelegate.swift in Sources */,
 				004D909C2EDD39D200BE5119 /* POPLayerExtras.mm in Sources */,
 				004D909D2EDD39D200BE5119 /* TransformationMatrix.cpp in Sources */,
+				004D90E12EDF013B00BE5119 /* TempViewController.swift in Sources */,
 				004D90C32EDEC4E800BE5119 /* BaseViewController.swift in Sources */,
 				004D909E2EDD39D200BE5119 /* POPVector.mm in Sources */,
 				004D90B22EDE8DC000BE5119 /* MainTabBarController.swift in Sources */,
@@ -452,6 +457,7 @@
 				004D90BF2EDEBBF700BE5119 /* JPConstant.m in Sources */,
 				004D90AB2EDD39D200BE5119 /* POPDecayAnimation.mm in Sources */,
 				004D90B72EDE900400BE5119 /* Env.swift in Sources */,
+				004D90DF2EDEFA8000BE5119 /* HomeViewController.swift in Sources */,
 				004D90AC2EDD39D200BE5119 /* POPAnimatableProperty.mm in Sources */,
 				004D90C72EDEC90700BE5119 /* UIView+JPPOP.m in Sources */,
 				004D90AD2EDD39D200BE5119 /* POPCGUtils.mm in Sources */,
@@ -486,6 +492,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -525,6 +532,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

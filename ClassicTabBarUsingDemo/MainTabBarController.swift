@@ -8,33 +8,40 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-    let vc0 = BaseViewController()
-    let vc1 = BaseViewController()
-    let vc2 = BaseViewController()
-    let vc3 = BaseViewController()
+    let vc0 = HomeViewController(index: 0)
+    let vc1 = HomeViewController(index: 1)
+    let vc2 = HomeViewController(index: 2)
+    let vc3 = HomeViewController(index: 3)
     
     private let customTabBar = WLTabBar()
     
-    /// 自定义TabBar的展示容器
+    /// 自定义TabBar的展示容器 --- 📌 iOS 26: Custom TabBar
     private var tabBarContainer: TabBarContainer? = nil
     
-    /// 挪动TabBar到当前子VC的回调
+    /// 挪动TabBar到当前子VC的回调 --- 📌 iOS 26: Custom TabBar
     private var moveTabBarWorkItem: DispatchWorkItem? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var config = UIBackgroundConfiguration.listCell()
+        config.backgroundColor = UIColor(white: 1, alpha: 0.6)
+        UITableViewCell.appearance().backgroundConfiguration = config
+        
         setupViewControllers()
         setupTabBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // 📌 iOS 26: Custom TabBar
         guard Env.isUsingLiquidGlassUI else { return }
         setTabBarHidden(true, animated: false)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        // 📌 iOS 26: Custom TabBar
         guard let tabBarContainer else { return }
         view.bringSubviewToFront(tabBarContainer)
     }
@@ -47,6 +54,7 @@ class MainTabBarController: UITabBarController {
         }
     }
     
+    // 📌 iOS 26: Custom TabBar
     func addTabBar(_ tabBar: UIView) {
         guard let tabBarContainer else { return }
         tabBar.superview?.isUserInteractionEnabled = false
@@ -58,47 +66,31 @@ class MainTabBarController: UITabBarController {
 // MARK: - 初始化配置
 private extension MainTabBarController {
     func setupViewControllers() {
-        vc0.title = "视频云"
-        vc1.title = "频道"
-        vc2.title = "直播间"
-        vc3.title = "我的"
-        
-        let navCtr0 = BaseNavigationController(rootViewController: vc0)
-        let navCtr1 = BaseNavigationController(rootViewController: vc1)
-        let navCtr2 = BaseNavigationController(rootViewController: vc2)
-        let navCtr3 = BaseNavigationController(rootViewController: vc3)
-        viewControllers = [navCtr0, navCtr1, navCtr2, navCtr3]
+        viewControllers = [
+            BaseNavigationController(rootViewController: vc0),
+            BaseNavigationController(rootViewController: vc1),
+            BaseNavigationController(rootViewController: vc2),
+            BaseNavigationController(rootViewController: vc3)
+        ]
     }
     
     func setupTabBar() {
-        customTabBar.addItem(
-            withTitle: vc0.title,
-            normalIcon: "com_videocloud_unselect_icon",
-            selectIcon: "com_videocloud_select_icon",
-            index: 0
-        )
-        
-        customTabBar.addItem(
-            withTitle: vc1.title,
-            normalIcon: "com_channel_unselect_icon",
-            selectIcon: "com_channel_select_icon",
-            index: 1
-        )
-        
-        customTabBar.addItem(
-            withTitle: vc2.title,
-            normalIcon: "com_direct_unselect_icon",
-            selectIcon: "com_direct_select_icon",
-            index: 2
-        )
-        
-        customTabBar.addItem(
-            withTitle: vc3.title,
-            normalIcon: "com_my_unselect_icon",
-            selectIcon: "com_my_select_icon",
-            index: 3
-        )
-        
+        customTabBar.addItem(withTitle: vc0.title,
+                             normalIcon: vc0.normalIcon,
+                             selectIcon: vc0.selectIcon,
+                             index: vc0.index)
+        customTabBar.addItem(withTitle: vc1.title,
+                             normalIcon: vc1.normalIcon,
+                             selectIcon: vc1.selectIcon,
+                             index: vc1.index)
+        customTabBar.addItem(withTitle: vc2.title,
+                             normalIcon: vc2.normalIcon,
+                             selectIcon: vc2.selectIcon,
+                             index: vc2.index)
+        customTabBar.addItem(withTitle: vc3.title,
+                             normalIcon: vc3.normalIcon,
+                             selectIcon: vc3.selectIcon,
+                             index: vc3.index)
         customTabBar.delegate = self
         
         guard Env.isUsingLiquidGlassUI else {
@@ -106,6 +98,7 @@ private extension MainTabBarController {
             return
         }
         
+        // 📌 iOS 26: Custom TabBar
         let container = TabBarContainer()
         container.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(container)
@@ -129,7 +122,7 @@ extension MainTabBarController: WLTabBarDelegate {
     }
 }
 
-// MARK: - 挪动TabBar到目标子VC（for iOS 26）
+// MARK: - 挪动TabBar到目标子VC --- 📌 iOS 26: Custom TabBar
 private extension MainTabBarController {
     func moveTabBar(from sourceIdx: Int, to targetIdx: Int) {
         guard Env.isUsingLiquidGlassUI else { return }
