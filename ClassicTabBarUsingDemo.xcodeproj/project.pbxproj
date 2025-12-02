@@ -32,6 +32,10 @@
 		004D90AC2EDD39D200BE5119 /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = 004D906B2EDD39D200BE5119 /* POPAnimatableProperty.mm */; };
 		004D90AD2EDD39D200BE5119 /* POPCGUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 004D90822EDD39D200BE5119 /* POPCGUtils.mm */; };
 		004D90B02EDD3B2E00BE5119 /* JPBounceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 004D90182EDD35CB00BE5119 /* JPBounceView.m */; };
+		004D90B22EDE8DC000BE5119 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90B12EDE8DC000BE5119 /* MainTabBarController.swift */; };
+		004D90B72EDE900400BE5119 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90B62EDE900400BE5119 /* Env.swift */; };
+		004D90B92EDE936600BE5119 /* JPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90B82EDE936600BE5119 /* JPrint.swift */; };
+		004D90BB2EDE987A00BE5119 /* Asyncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90BA2EDE987A00BE5119 /* Asyncs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +104,10 @@
 		004D90952EDD39D200BE5119 /* POPSpringSolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POPSpringSolver.h; sourceTree = "<group>"; };
 		004D90962EDD39D200BE5119 /* POPVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POPVector.h; sourceTree = "<group>"; };
 		004D90972EDD39D200BE5119 /* POPVector.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = POPVector.mm; sourceTree = "<group>"; };
+		004D90B12EDE8DC000BE5119 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		004D90B62EDE900400BE5119 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		004D90B82EDE936600BE5119 /* JPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPrint.swift; sourceTree = "<group>"; };
+		004D90BA2EDE987A00BE5119 /* Asyncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,7 @@
 			children = (
 				004D8FF92EDC3CBE00BE5119 /* AppDelegate.swift */,
 				004D90002EDC3CBE00BE5119 /* SceneDelegate.swift */,
+				004D90B12EDE8DC000BE5119 /* MainTabBarController.swift */,
 				004D90012EDC3CBE00BE5119 /* ViewController.swift */,
 				004D900C2EDD353D00BE5119 /* TabBar */,
 				004D90622EDD37D000BE5119 /* Helper */,
@@ -166,8 +175,9 @@
 		004D90622EDD37D000BE5119 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				004D90172EDD35CB00BE5119 /* JPBounceView.h */,
-				004D90182EDD35CB00BE5119 /* JPBounceView.m */,
+				004D90B52EDE8FF900BE5119 /* Const */,
+				004D90B42EDE8FE600BE5119 /* Tool */,
+				004D90B32EDE8FDB00BE5119 /* View */,
 				004D90982EDD39D200BE5119 /* pop */,
 			);
 			path = Helper;
@@ -238,6 +248,32 @@
 				004D90972EDD39D200BE5119 /* POPVector.mm */,
 			);
 			path = pop;
+			sourceTree = "<group>";
+		};
+		004D90B32EDE8FDB00BE5119 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				004D90172EDD35CB00BE5119 /* JPBounceView.h */,
+				004D90182EDD35CB00BE5119 /* JPBounceView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		004D90B42EDE8FE600BE5119 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				004D90B82EDE936600BE5119 /* JPrint.swift */,
+				004D90BA2EDE987A00BE5119 /* Asyncs.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		004D90B52EDE8FF900BE5119 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				004D90B62EDE900400BE5119 /* Env.swift */,
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,11 +357,14 @@
 				004D909C2EDD39D200BE5119 /* POPLayerExtras.mm in Sources */,
 				004D909D2EDD39D200BE5119 /* TransformationMatrix.cpp in Sources */,
 				004D909E2EDD39D200BE5119 /* POPVector.mm in Sources */,
+				004D90B22EDE8DC000BE5119 /* MainTabBarController.swift in Sources */,
 				004D909F2EDD39D200BE5119 /* POPGeometry.mm in Sources */,
 				004D90A02EDD39D200BE5119 /* POPAnimationEvent.mm in Sources */,
 				004D90A12EDD39D200BE5119 /* POPAnimationTracer.mm in Sources */,
 				004D90A22EDD39D200BE5119 /* POPMath.mm in Sources */,
 				004D90A32EDD39D200BE5119 /* POPSpringAnimation.mm in Sources */,
+				004D90BB2EDE987A00BE5119 /* Asyncs.swift in Sources */,
+				004D90B92EDE936600BE5119 /* JPrint.swift in Sources */,
 				004D90A42EDD39D200BE5119 /* POPAnimation.mm in Sources */,
 				004D90A52EDD39D200BE5119 /* POPAnimationExtras.mm in Sources */,
 				004D90A62EDD39D200BE5119 /* POPAnimationRuntime.mm in Sources */,
@@ -335,6 +374,7 @@
 				004D90A92EDD39D200BE5119 /* POPAnimator.mm in Sources */,
 				004D90AA2EDD39D200BE5119 /* POPCustomAnimation.mm in Sources */,
 				004D90AB2EDD39D200BE5119 /* POPDecayAnimation.mm in Sources */,
+				004D90B72EDE900400BE5119 /* Env.swift in Sources */,
 				004D90AC2EDD39D200BE5119 /* POPAnimatableProperty.mm in Sources */,
 				004D90AD2EDD39D200BE5119 /* POPCGUtils.mm in Sources */,
 			);
@@ -376,8 +416,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,6 +426,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhoujianping.ClassicTabBarUsingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -393,7 +437,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -411,8 +455,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,13 +465,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhoujianping.ClassicTabBarUsingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ClassicTabBarUsingDemo/Supporting Files/ClassicTabBarUsingDemo-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
