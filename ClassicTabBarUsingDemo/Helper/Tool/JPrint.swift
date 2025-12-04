@@ -28,7 +28,7 @@ private let JPrintQueue = DispatchQueue(label: "com.zhoujianping.JPrintQueue")
 func JPrint(_ msg: Any..., file: NSString = #file, line: Int = #line, fn: String = #function) {
     JPrint(msg, file: file, line: line, fn: fn)
 }
-func JPrint(_ msg: [Any], file: NSString = #file, line: Int = #line, fn: String = #function) {
+private func JPrint(_ msg: [Any], file: NSString = #file, line: Int = #line, fn: String = #function) {
 #if DEBUG
     guard msg.count > 0 else { return }
     

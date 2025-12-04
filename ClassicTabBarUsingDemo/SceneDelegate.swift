@@ -18,9 +18,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = MainTabBarController()
+        let mainVC = MainTabBarController()
+        window.rootViewController = mainVC
         window.makeKeyAndVisible()
         self.window = window
+        
+        // 执行`window.makeKeyAndVisible()`之后导航栏的大标题才能显示，
+        // 此时拿到的`adjustedContentInset.top`才是完整的，因此把界面初始化放到这里执行。
+        mainVC.setup()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

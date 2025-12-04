@@ -59,8 +59,7 @@
     if (self = [super initWithFrame:CGRectMake(0, 0, Env.screenWidth, Env.tabBarFullH)]) {
         self.backgroundColor = UIColor.clearColor;
         
-        UIGlassEffect *effect = [UIGlassEffect effectWithStyle:UIGlassEffectStyleClear];
-        effect.tintColor = [UIColor colorWithWhite:0.2 alpha:0.8];
+        UIGlassEffect *effect = [UIGlassEffect effectWithStyle:UIGlassEffectStyleRegular];
         UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
         blurView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width);
         blurView.layer.cornerRadius = JPScaleValue(16);

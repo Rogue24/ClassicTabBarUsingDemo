@@ -8,11 +8,11 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-    let vc0 = HomeViewController(index: 0)
-    let vc1 = HomeViewController(index: 1)
-    let vc2 = HomeViewController(index: 2)
-    let vc3 = HomeViewController(index: 3)
-    
+    private var isSetuped = false
+    private let vc0 = HomeViewController(index: 0)
+    private let vc1 = HomeViewController(index: 1)
+    private let vc2 = HomeViewController(index: 2)
+    private let vc3 = HomeViewController(index: 3)
     private let customTabBar = WLTabBar()
     
     /// 自定义TabBar的展示容器 --- 📌 iOS 26: Custom TabBar
@@ -23,14 +23,10 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         var config = UIBackgroundConfiguration.listCell()
         config.backgroundColor = .clear
         config.visualEffect = UIBlurEffect(style: .systemThinMaterialLight)
         UITableViewCell.appearance().backgroundConfiguration = config
-        
-        setupViewControllers()
-        setupTabBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,17 +61,20 @@ class MainTabBarController: UITabBarController {
 }
 
 // MARK: - 初始化配置
-private extension MainTabBarController {
-    func setupViewControllers() {
+extension MainTabBarController {
+    func setup() {
+        guard !isSetuped else { return }
+        isSetuped = true
+        
+        // -------- 子VC --------
         viewControllers = [
             BaseNavigationController(rootViewController: vc0),
             BaseNavigationController(rootViewController: vc1),
             BaseNavigationController(rootViewController: vc2),
             BaseNavigationController(rootViewController: vc3)
         ]
-    }
-    
-    func setupTabBar() {
+        
+        // -------- 自定义TabBar --------
         customTabBar.addItem(withTitle: vc0.title,
                              normalIcon: vc0.normalIcon,
                              selectIcon: vc0.selectIcon,
@@ -94,6 +93,7 @@ private extension MainTabBarController {
                              index: vc3.index)
         customTabBar.delegate = self
         
+        // -------- TabBar容器 --------
         guard Env.isUsingLiquidGlassUI else {
             tabBar.addSubview(customTabBar)
             return
