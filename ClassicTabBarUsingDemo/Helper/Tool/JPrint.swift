@@ -10,7 +10,7 @@ import Foundation
 #if DEBUG
 import os
 
-private let logger_subsystem = "com.falla.logger"
+private let logger_subsystem = "com.zhoujianping.logger"
 private let logger_category = "JPDebug"
 private let logger = OSLog(subsystem: logger_subsystem, category: logger_category)
 
