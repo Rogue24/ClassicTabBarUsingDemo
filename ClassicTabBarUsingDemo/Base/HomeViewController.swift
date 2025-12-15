@@ -8,24 +8,19 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
-    let index: Int
+    let myTab: MainTab
     
-    private let bgImgView = UIImageView()
-    
-    init(index: Int) {
-        self.index = index
+    init(_ myTab: MainTab) {
+        self.myTab = myTab
         super.init(nibName: nil, bundle: nil)
-        switch index {
-        case 0: title = "视频云"
-        case 1: title = "频道"
-        case 2: title = "直播间"
-        default: title = "我的"
-        }
+        title = myTab.title
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    private let bgImgView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,34 +80,6 @@ class HomeViewController: BaseViewController {
         
         /// ⚠️ 系统Bug：需要强制布局一下，否则`tableView.frame`一直都是0，并且可能联动失效。
         view.layoutIfNeeded()
-    }
-}
-
-extension HomeViewController {
-    var normalIcon: String {
-        switch index {
-        case 0:
-            return "com_videocloud_unselect_icon"
-        case 1:
-            return "com_channel_unselect_icon"
-        case 2:
-            return "com_direct_unselect_icon"
-        default:
-            return "com_my_unselect_icon"
-        }
-    }
-    
-    var selectIcon: String {
-        switch index {
-        case 0:
-            return "com_videocloud_select_icon"
-        case 1:
-            return "com_channel_select_icon"
-        case 2:
-            return "com_direct_select_icon"
-        default:
-            return "com_my_select_icon"
-        }
     }
 }
 

@@ -50,6 +50,8 @@
 		004D90DD2EDEF27300BE5119 /* IMG_1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 004D90CF2EDEF27300BE5119 /* IMG_1.jpeg */; };
 		004D90DF2EDEFA8000BE5119 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90DE2EDEFA8000BE5119 /* HomeViewController.swift */; };
 		004D90E12EDF013B00BE5119 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D90E02EDF013B00BE5119 /* TempViewController.swift */; };
+		004D91112EEFB03400BE5119 /* WLTabBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D91102EEFB03400BE5119 /* WLTabBar+.swift */; };
+		004D91142EEFB16100BE5119 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D91132EEFB16100BE5119 /* MainTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +140,8 @@
 		004D90DE2EDEFA8000BE5119 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		004D90E02EDF013B00BE5119 /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		004D90E22EDF2C0100BE5119 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		004D91102EEFB03400BE5119 /* WLTabBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WLTabBar+.swift"; sourceTree = "<group>"; };
+		004D91132EEFB16100BE5119 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,11 +177,8 @@
 			children = (
 				004D8FF92EDC3CBE00BE5119 /* AppDelegate.swift */,
 				004D90002EDC3CBE00BE5119 /* SceneDelegate.swift */,
-				004D90B12EDE8DC000BE5119 /* MainTabBarController.swift */,
-				004D90DE2EDEFA8000BE5119 /* HomeViewController.swift */,
-				004D90E02EDF013B00BE5119 /* TempViewController.swift */,
+				004D910E2EEFACC500BE5119 /* Main */,
 				004D90CC2EDEF1C200BE5119 /* Base */,
-				004D900C2EDD353D00BE5119 /* TabBar */,
 				004D90622EDD37D000BE5119 /* Helper */,
 				004D900B2EDC3CF400BE5119 /* Supporting Files */,
 			);
@@ -202,6 +203,7 @@
 				004D90C82EDEDADE00BE5119 /* TabBarContainer.swift */,
 				004D90112EDD358800BE5119 /* WLTabBar.h */,
 				004D90122EDD358800BE5119 /* WLTabBar.m */,
+				004D91102EEFB03400BE5119 /* WLTabBar+.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -328,6 +330,8 @@
 			children = (
 				004D90C02EDEC4D600BE5119 /* BaseNavigationController.swift */,
 				004D90C22EDEC4E800BE5119 /* BaseViewController.swift */,
+				004D90DE2EDEFA8000BE5119 /* HomeViewController.swift */,
+				004D90E02EDF013B00BE5119 /* TempViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -344,6 +348,16 @@
 				004D90D42EDEF27300BE5119 /* IMG_6.jpeg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		004D910E2EEFACC500BE5119 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				004D91132EEFB16100BE5119 /* MainTab.swift */,
+				004D90B12EDE8DC000BE5119 /* MainTabBarController.swift */,
+				004D900C2EDD353D00BE5119 /* TabBar */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +445,7 @@
 				004D90042EDC3CBE00BE5119 /* SceneDelegate.swift in Sources */,
 				004D909C2EDD39D200BE5119 /* POPLayerExtras.mm in Sources */,
 				004D909D2EDD39D200BE5119 /* TransformationMatrix.cpp in Sources */,
+				004D91142EEFB16100BE5119 /* MainTab.swift in Sources */,
 				004D90E12EDF013B00BE5119 /* TempViewController.swift in Sources */,
 				004D90C32EDEC4E800BE5119 /* BaseViewController.swift in Sources */,
 				004D909E2EDD39D200BE5119 /* POPVector.mm in Sources */,
@@ -456,6 +471,7 @@
 				004D90AA2EDD39D200BE5119 /* POPCustomAnimation.mm in Sources */,
 				004D90BF2EDEBBF700BE5119 /* JPConstant.m in Sources */,
 				004D90AB2EDD39D200BE5119 /* POPDecayAnimation.mm in Sources */,
+				004D91112EEFB03400BE5119 /* WLTabBar+.swift in Sources */,
 				004D90B72EDE900400BE5119 /* Env.swift in Sources */,
 				004D90DF2EDEFA8000BE5119 /* HomeViewController.swift in Sources */,
 				004D90AC2EDD39D200BE5119 /* POPAnimatableProperty.mm in Sources */,

@@ -9,10 +9,10 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     private var isSetuped = false
-    private let vc0 = HomeViewController(index: 0)
-    private let vc1 = HomeViewController(index: 1)
-    private let vc2 = HomeViewController(index: 2)
-    private let vc3 = HomeViewController(index: 3)
+    private let videoHubVC = HomeViewController(.videoHub)
+    private let channelVC = HomeViewController(.channel)
+    private let liveVC = HomeViewController(.live)
+    private let mineVC = HomeViewController(.mine)
     private let customTabBar = WLTabBar()
     
     /// 自定义TabBar的展示容器 --- 📌 iOS 26: Custom TabBar
@@ -68,29 +68,17 @@ extension MainTabBarController {
         
         // -------- 子VC --------
         viewControllers = [
-            BaseNavigationController(rootViewController: vc0),
-            BaseNavigationController(rootViewController: vc1),
-            BaseNavigationController(rootViewController: vc2),
-            BaseNavigationController(rootViewController: vc3)
+            BaseNavigationController(rootViewController: videoHubVC),
+            BaseNavigationController(rootViewController: channelVC),
+            BaseNavigationController(rootViewController: liveVC),
+            BaseNavigationController(rootViewController: mineVC)
         ]
         
         // -------- 自定义TabBar --------
-        customTabBar.addItem(withTitle: vc0.title,
-                             normalIcon: vc0.normalIcon,
-                             selectIcon: vc0.selectIcon,
-                             index: vc0.index)
-        customTabBar.addItem(withTitle: vc1.title,
-                             normalIcon: vc1.normalIcon,
-                             selectIcon: vc1.selectIcon,
-                             index: vc1.index)
-        customTabBar.addItem(withTitle: vc2.title,
-                             normalIcon: vc2.normalIcon,
-                             selectIcon: vc2.selectIcon,
-                             index: vc2.index)
-        customTabBar.addItem(withTitle: vc3.title,
-                             normalIcon: vc3.normalIcon,
-                             selectIcon: vc3.selectIcon,
-                             index: vc3.index)
+        customTabBar.addItem(for: videoHubVC)
+        customTabBar.addItem(for: channelVC)
+        customTabBar.addItem(for: liveVC)
+        customTabBar.addItem(for: mineVC)
         customTabBar.delegate = self
         
         // -------- TabBar容器 --------
@@ -170,15 +158,16 @@ private extension MainTabBarController {
     }
     
     func _moveTabBar(to index: Int) {
-        switch index {
-        case 0:
-            vc0.addTabBar(customTabBar)
-        case 1:
-            vc1.addTabBar(customTabBar)
-        case 2:
-            vc2.addTabBar(customTabBar)
-        default:
-            vc3.addTabBar(customTabBar)
+        let tab = MainTab(index: index)
+        switch tab {
+        case .videoHub:
+            videoHubVC.addTabBar(customTabBar)
+        case .channel:
+            channelVC.addTabBar(customTabBar)
+        case .live:
+            liveVC.addTabBar(customTabBar)
+        case .mine:
+            mineVC.addTabBar(customTabBar)
         }
     }
 }
