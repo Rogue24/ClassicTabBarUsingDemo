@@ -2,8 +2,8 @@
 
 该Demo主要演示如何在 **iOS 26** 的`UITabBarController`中使用**自定义TabBar**实现以往的显示效果（主要实现代码可搜索“📌”查看）。
 
-<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/explain1.gif" width="50%">
-<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/explain2.gif" width="50%">
+<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/explain1.gif" width="25%">
+<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/explain2.gif" width="25%">
 
 ***
 
