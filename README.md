@@ -59,17 +59,17 @@ setValue(customTabBar, forKeyPath: "tabBar")
 
 - 同样把它禁止掉就行了
 
-这样就相当于把`UITabBar`的液态玻璃“移除”掉了，实现以往的显示效果。
-
-只不过这个方案在pop手势滑动过程中TabBar会置顶显示：
+这样就相当于把`UITabBar`的液态玻璃“移除”掉了，实现以往的显示效果。只不过这个方案在pop手势滑动时，TabBar会被「置顶」显示：
 
 <img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/image4.png" width="50%">
 
-这是新UI的显示逻辑，而我希望连pop手势也能像以前那样：
+- 这是苹果新UI的显示逻辑，暂时无法改动
+
+这跟我的预期还差了一点，我是希望连pop手势也能像以前那样：
 
 <img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/image5.png" width="50%">
 
-这跟我的预期还差了一点，接下来介绍我的方案，能更好实现以往的效果。
+接下来介绍一下另一个方案，虽然麻烦很多，但能完全兼顾pop手势。
 
 ## 方案二
 
@@ -234,7 +234,7 @@ extension MainTabBarController: WLTabBarDelegate {
 
 方案二是我能想到最完美的方案了，起码不用自定义`UITabBarController`，简单粗暴，个人感觉能应付80%的应用场景吧，除非你有非常特殊的过场动画需要挪动TabBar的。
 
-更多细节可以参考Demo，以上两种方案都有提供，只要在`WLTabBar.h`中选择使用哪一种父类注释另一个即可：
+更多细节可以参考Demo，以上两种方案都有提供，只需要在`WLTabBar.h`中选择使用哪一种父类并注释另一个即可：
 
 ```objc
 @interface WLTabBar : UITabBar // 方案一
