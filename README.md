@@ -55,7 +55,6 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let tabBarContainer else { return }
         tabBarContainer.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tabBarContainer)
         NSLayoutConstraint.activate([
