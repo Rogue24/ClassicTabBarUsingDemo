@@ -330,8 +330,6 @@
 			children = (
 				004D90C02EDEC4D600BE5119 /* BaseNavigationController.swift */,
 				004D90C22EDEC4E800BE5119 /* BaseViewController.swift */,
-				004D90DE2EDEFA8000BE5119 /* HomeViewController.swift */,
-				004D90E02EDF013B00BE5119 /* TempViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -356,8 +354,18 @@
 				004D91132EEFB16100BE5119 /* MainTab.swift */,
 				004D90B12EDE8DC000BE5119 /* MainTabBarController.swift */,
 				004D900C2EDD353D00BE5119 /* TabBar */,
+				004D91172EF39BAD00BE5119 /* ViewController */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		004D91172EF39BAD00BE5119 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				004D90DE2EDEFA8000BE5119 /* HomeViewController.swift */,
+				004D90E02EDF013B00BE5119 /* TempViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
