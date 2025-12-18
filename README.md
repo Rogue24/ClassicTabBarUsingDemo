@@ -19,7 +19,7 @@
 
 ## 方案一
 
-来自大佬网友分享的方案
+来自大佬网友分享的方案 💪
 
 1. **自定义TabBar**使用`UITabBar`，通过KVC设置（老方法）：
 
@@ -59,7 +59,7 @@ setValue(customTabBar, forKeyPath: "tabBar")
 
 - 同样把它禁止掉就行了
 
-这样就相当于把`UITabBar`的液态玻璃“移除”掉了，实现以往的显示效果。
+这样就相当于把`UITabBar`的液态玻璃“移除”掉了，是可以实现以往的显示效果👏。
 
 只不过这个方案在pop手势滑动时，TabBar会被「置顶」显示：
 
@@ -71,7 +71,7 @@ setValue(customTabBar, forKeyPath: "tabBar")
 
 <img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/image5.png" width="50%">
 
-接下来介绍一下另一个方案，虽然麻烦很多，但能完全兼顾pop手势。
+接下来介绍另一个方案，虽然麻烦很多，但能兼顾pop手势。
 
 ## 方案二
 
@@ -138,7 +138,7 @@ class BaseViewController: UIViewController {
 
 3. 最后，`TabBarController`当前显示哪个子VC，就把**自定义TabBar**放到对应子VC的**TabBar容器**上，这样则不会影响`push`或`present`其他VC。
 
-OK，完事了。
+OK，完事了😗。
 
 ### 注意点
 
@@ -148,7 +148,7 @@ OK，完事了。
 
 **在切换子VC前，自定义TabBar必须先放到TabBarController的TabBar容器上，切换后再放到目标子VC的TabBar容器上。**
 
-为什么？
+🤔为什么？
 
 一般子VC的内容都是懒加载（看到才构建），如果是很复杂的界面，不免会有卡顿的情况，如果直接把自定义TabBar丢过去，TabBar会闪烁一下，效果不太好；另外自 iOS 18 起切换子VC会带有默认的系统动画，其动画作用于子VC的view上，即便该子VC早就构建好，立马转移TabBar也会闪烁一下。
 
@@ -243,7 +243,7 @@ extension MainTabBarController: WLTabBarDelegate {
 @interface WLTabBar : UIView // 方案二
 ```
 
-希望苹果以后能推出兼容自定义TabBar的API，那就不用这样魔改了。
+希望苹果以后能推出兼容自定义TabBar的API，那就不用这样魔改了😩。
   
 ## Author
 
