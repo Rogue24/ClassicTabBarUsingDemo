@@ -176,9 +176,11 @@ extension MainTabBarController: WLTabBarDelegate {
 
 ## 小结
 
-以上就是我的方案了，起码不用自定义`UITabBarController`，更加简单粗暴，更多细节可以参考Demo。
+以上就是我的方案了，起码不用自定义`UITabBarController`，简单粗暴，个人感觉能应付80%的应用场景吧，除非你有非常特殊的过场动画需要挪动TabBar的。
 
-个人感觉能应付80%的应用场景吧，除非你有非常特殊的过场动画需要挪动TabBar的。当然希望苹果以后能推出兼容自定义TabBar的API，那就不用这样魔改了。
+更多细节可以参考Demo。
+
+希望苹果以后能推出兼容自定义TabBar的API，那就不用这样魔改了。
   
 ## Author
 
