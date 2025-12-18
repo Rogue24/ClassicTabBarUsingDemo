@@ -15,9 +15,11 @@
 - (void)tabBar:(WLTabBar *)tabBar didSelectItemAt:(NSInteger)index;
 @end
 
-@interface WLTabBar : UIView
+//@interface WLTabBar : UITabBar // 方案一
+@interface WLTabBar : UIView // 方案二
+
 @property (nonatomic, assign) NSInteger selectedIndex;
-@property (nonatomic, weak) id<WLTabBarDelegate> delegate;
+@property (nonatomic, weak) id<WLTabBarDelegate> wlDelegate;
 
 @property (nonatomic, strong) NSMutableArray<WLTabBarItem *> *tabBarItems;
 - (void)addItemWithTitle:(NSString *)title

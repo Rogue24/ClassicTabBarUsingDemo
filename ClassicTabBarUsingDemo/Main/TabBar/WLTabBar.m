@@ -101,7 +101,25 @@
     return self;
 }
 
-#pragma mark - 重写父类方法（点击区域的响应）
+#pragma mark - 重写父类方法
+
+- (void)addSubview:(UIView *)view {
+    if ([self isKindOfClass:[UITabBar class]]) {
+        if ([view isKindOfClass:NSClassFromString(@"UIKit._UITabBarPlatterView")]) {
+            view.hidden = YES;
+        }
+    }
+    [super addSubview:view];
+}
+
+- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer {
+    if ([self isKindOfClass:[UITabBar class]]) {
+        if ([gestureRecognizer isKindOfClass:NSClassFromString(@"_UIContinuousSelectionGestureRecognizer")]) {
+            gestureRecognizer.enabled = NO;
+        }
+    }
+    [super addGestureRecognizer:gestureRecognizer];
+}
 
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
     if (self.plusing) {
@@ -146,7 +164,7 @@
         __strong typeof(wSelf) sSelf = wSelf;
         if (!sSelf || sSelf.selectedIndex == bounceView.tag) return;
         sSelf.selectedIndex = bounceView.tag;
-        [sSelf.delegate tabBar:sSelf didSelectItemAt:sSelf.selectedIndex];
+        [sSelf.wlDelegate tabBar:sSelf didSelectItemAt:sSelf.selectedIndex];
     };
     [self.tabBarItems addObject:tabBarItem];
     [self insertSubview:tabBarItem belowSubview:self.plusSuperView];

@@ -15,9 +15,63 @@
 
 - *强行给你套个玻璃罩子*
 
-那如何在 **iOS 26** 的`UITabBarController`继续使用自定义`TabBar`呢？这里介绍一下我的方案。
+那如何在 **iOS 26** 的`UITabBarController`继续使用自定义`TabBar`呢？这里介绍一下两种方案。
 
-## 实现方案
+## 方案一
+
+来自大佬网友分享的方案
+
+1. **自定义TabBar**使用`UITabBar`，通过KVC设置（老方法）：
+
+```swift
+setValue(customTabBar, forKeyPath: "tabBar")
+```
+
+2. 重写`UITabBar`的`addSubview`和`addGestureRecognizer`方法：
+
+```objc
+- (void)addSubview:(UIView *)view {
+    if ([view isKindOfClass:NSClassFromString(@"UIKit._UITabBarPlatterView")]) {
+        view.hidden = YES;
+    }
+    [super addSubview:view];
+}
+
+- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer {
+    if ([gestureRecognizer isKindOfClass:NSClassFromString(@"_UIContinuousSelectionGestureRecognizer")]) {
+        gestureRecognizer.enabled = NO;
+    }
+    [super addGestureRecognizer:gestureRecognizer];
+}
+```
+
+解释一下：
+
+`_UITabBarPlatterView`这个是显示当前Tab的玻璃罩子：
+
+<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/image2.png" width="50%">
+
+- 把它隐藏掉就行了
+
+`_UIContinuousSelectionGestureRecognizer`这个是系统用来处理TabBar切换时的动画手势，触发时会在TabBar上添加`_UIPortalView`这个跟随手势的玻璃罩子：
+
+<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/image3.png" width="50%">
+
+- 同样把它禁止掉就行了
+
+这样就相当于把`UITabBar`的液态玻璃“移除”掉了，实现以往的显示效果。
+
+只不过这个方案在pop手势滑动过程中TabBar会置顶显示：
+
+<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/image4.png" width="50%">
+
+这是新UI的显示逻辑，而我希望连pop手势也能像以前那样：
+
+<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/image5.png" width="50%">
+
+这跟我的预期还差了一点，接下来介绍我的方案，能更好实现以往的效果。
+
+## 方案二
 
 经观察，以往`TabBar`的显示效果，个人猜测系统是把`TabBar`放到**当前子VC**的view上：
 
@@ -84,7 +138,7 @@ class BaseViewController: UIViewController {
 
 OK，完事了。
 
-## 注意点
+### 注意点
 
 核心实现就是以上3点，接下来讲一下注意点。
 
@@ -176,9 +230,16 @@ extension MainTabBarController: WLTabBarDelegate {
 
 ## 小结
 
-以上就是我的方案了，起码不用自定义`UITabBarController`，简单粗暴，个人感觉能应付80%的应用场景吧，除非你有非常特殊的过场动画需要挪动TabBar的。
+方案一是比较激进的魔改方案，直接把系统的玻璃罩子和手势给移除掉了，缺点是如果苹果以后改动了这些私有类名或行为，可能会导致失效。
 
-更多细节可以参考Demo。
+方案二是我能想到最完美的方案了，起码不用自定义`UITabBarController`，简单粗暴，个人感觉能应付80%的应用场景吧，除非你有非常特殊的过场动画需要挪动TabBar的。
+
+更多细节可以参考Demo，以上两种方案都有提供，只要在`WLTabBar.h`中选择使用哪一种父类注释另一个即可：
+
+```objc
+@interface WLTabBar : UITabBar // 方案一
+@interface WLTabBar : UIView // 方案二
+```
 
 希望苹果以后能推出兼容自定义TabBar的API，那就不用这样魔改了。
   

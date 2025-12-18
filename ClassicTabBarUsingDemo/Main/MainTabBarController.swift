@@ -15,6 +15,12 @@ class MainTabBarController: UITabBarController {
     private let mineVC = HomeViewController(.mine)
     private let customTabBar = WLTabBar()
     
+    private var isUsingUITabBar: Bool {
+        // 直接判断会一直有警告，碍眼，所以换一种方式判断
+        // return customTabBar is UITabBar
+        return NSStringFromClass(type(of: customTabBar).superclass()!) == "UITabBar"
+    }
+    
     /// 自定义TabBar的展示容器 --- 📌 iOS 26: Custom TabBar
     private var tabBarContainer: TabBarContainer? = nil
     
@@ -32,7 +38,7 @@ class MainTabBarController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // 📌 iOS 26: Custom TabBar
-        guard Env.isUsingLiquidGlassUI else { return }
+        guard Env.isUsingLiquidGlassUI, !isUsingUITabBar else { return }
         setTabBarHidden(true, animated: false)
     }
     
@@ -79,7 +85,12 @@ extension MainTabBarController {
         customTabBar.addItem(for: channelVC)
         customTabBar.addItem(for: liveVC)
         customTabBar.addItem(for: mineVC)
-        customTabBar.delegate = self
+        customTabBar.wlDelegate = self
+        
+        if isUsingUITabBar {
+            setValue(customTabBar, forKeyPath: "tabBar")
+            return
+        }
         
         // -------- TabBar容器 --------
         guard Env.isUsingLiquidGlassUI else {
@@ -118,7 +129,7 @@ extension MainTabBarController: WLTabBarDelegate {
 // MARK: - 挪动TabBar到目标子VC --- 📌 iOS 26: Custom TabBar
 private extension MainTabBarController {
     func moveTabBar(from sourceIdx: Int, to targetIdx: Int) {
-        guard Env.isUsingLiquidGlassUI else { return }
+        guard Env.isUsingLiquidGlassUI, !isUsingUITabBar else { return }
         
         // #1 取消上一次的延时操作
         moveTabBarWorkItem?.cancel()
