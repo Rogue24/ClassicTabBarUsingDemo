@@ -1,9 +1,11 @@
 # ClassicTabBarUsingDemo
 
-该Demo主要演示如何在 **iOS 26** 的`UITabBarController`中使用**自定义TabBar**实现以往的显示效果（主要实现代码可在Demo中搜索“📌”查看）。
+该Demo主要演示如何在 **iOS 26** 的`UITabBarController`中使用**自定义TabBar**实现以往的显示效果（主要实现代码可搜索“📌”查看）。
 
-![explain1](https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/explain1.gif)
-![explain2](https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/explain2.gif)
+<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/explain1.gif" width="50%">
+<img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/explain2.gif" width="50%">
+
+***
 
 苹果自 iOS 26 起就使用全新的UI --- Liquid Glass，导致很多系统组件也被迫强制使用，首当其冲就是`UITabBarController`，对于很多喜欢使用自定义TabBar的开发者来说，这很是无奈：
 
