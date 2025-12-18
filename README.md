@@ -59,7 +59,9 @@ setValue(customTabBar, forKeyPath: "tabBar")
 
 - 同样把它禁止掉就行了
 
-这样就相当于把`UITabBar`的液态玻璃“移除”掉了，实现以往的显示效果。只不过这个方案在pop手势滑动时，TabBar会被「置顶」显示：
+这样就相当于把`UITabBar`的液态玻璃“移除”掉了，实现以往的显示效果。
+
+只不过这个方案在pop手势滑动时，TabBar会被「置顶」显示：
 
 <img src="https://github.com/Rogue24/JPCover/raw/master/ClassicTabBarUsingDemo/image4.png" width="50%">
 
